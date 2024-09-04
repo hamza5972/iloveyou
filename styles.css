@@ -1,0 +1,93 @@
+/* Ensure the body takes up the full viewport height and remove default margins */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the animated background */
+.background {
+  height: 100%;
+  width: 100%;
+  background-color: #ffd699; /* Light orange color */
+  animation: blinkAnimation 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the card */
+.card {
+  background-color: #000; /* Black background for the card */
+  color: #fff; /* White text color */
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative; /* Required for button positioning */
+  animation: cardAnimation 1s ease-in-out;
+}
+
+/* Header styling */
+.card h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #ff6f61; /* Coral color for the header */
+}
+
+/* Paragraph styling */
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Button styling */
+.button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px; /* Smaller padding for the button */
+  font-size: 0.8em; /* Smaller font size for the button */
+  color: #fff;
+  background-color: #ff6f61; /* Coral color for the button */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e65c50; /* Slightly darker coral for hover effect */
+}
+
+/* Animation for the background */
+@keyframes blinkAnimation {
+  0% {
+    background-color: lightgoldenrodyellow;
+  }
+  25% {
+    background-color: lightcyan;
+  }
+  50% {
+    background-color: lightpink;
+  }
+  75% {
+    background-color: lightsalmon;
+  }
+  100% {
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+/* Animation for the card */
+@keyframes cardAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
